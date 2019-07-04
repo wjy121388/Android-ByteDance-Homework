@@ -13,6 +13,8 @@
             <option value="$PROJECT_DIR$/homework2" />
             <option value="$PROJECT_DIR$/homework3" />
             <option value="$PROJECT_DIR$/homework4" />
+            <option value="$PROJECT_DIR$/homework5" />
+            <option value="$PROJECT_DIR$/introducing_multithreading_and_retrofit" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
