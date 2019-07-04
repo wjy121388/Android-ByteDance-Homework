@@ -101,7 +101,6 @@ public class Solution2C1Activity extends AppCompatActivity {
                         @Override
                         public void onResponse(@NonNull Call<Cat[]> call, @NonNull Response<Cat[]> response) {
                            // Cat[] cats = response.body();
-                            List<Cat> cats1;
                             Log.d(TAG, "onResponse: ");
                             loadPics(new ArrayList<>(Arrays.asList(response.body())));
                             restoreBtn();
