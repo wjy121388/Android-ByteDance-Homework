@@ -8,6 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/VideoPlayerDemo" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/demo3" />
             <option value="$PROJECT_DIR$/homework2" />
@@ -15,6 +16,7 @@
             <option value="$PROJECT_DIR$/homework4" />
             <option value="$PROJECT_DIR$/homework5" />
             <option value="$PROJECT_DIR$/homework6" />
+            <option value="$PROJECT_DIR$/homework7(VideoPlayer)" />
             <option value="$PROJECT_DIR$/introducing_multithreading_and_retrofit" />
           </set>
         </option>

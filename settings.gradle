@@ -1,1 +1,1 @@
-include ':app', ':homework2', ':demo3', ':homework3', ':homework4', ':homework5', ':introducing_multithreading_and_retrofit', 'homework6'
+include ':app', ':homework2', ':demo3', ':homework3', ':homework4', ':homework5', ':introducing_multithreading_and_retrofit', 'homework6', 'homework7(VideoPlayer)', ':VideoPlayerDemo'

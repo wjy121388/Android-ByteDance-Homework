@@ -14,7 +14,12 @@ import android.widget.Toast;
 
 import com.byted.camp.todolist.R;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -65,7 +70,47 @@ public class DebugActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO 把一段文本写入某个存储区的文件中，再读出来，显示在 fileText 上
-                fileText.setText("TODO");
+
+                File file1 = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/text1.txt");
+                //File file2 = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/text2.txt");
+
+                FileReader fileReader = null;
+                FileWriter fileWriter = null;
+                BufferedReader bufferedReader = null;
+                BufferedWriter bufferedWriter = null;
+
+                try{
+                    fileReader = new FileReader(file1);
+                    fileWriter = new FileWriter(file1);
+                    bufferedReader = new BufferedReader(fileReader);
+                    bufferedWriter = new BufferedWriter(fileWriter);
+
+                    String write = "testTEST\nfist Line\nsecond Line";
+                    String Line,read="";
+
+                    bufferedWriter.write(write);
+                    while((Line=bufferedReader.readLine())!=null){
+                        read = read + bufferedReader.readLine() + "\n";
+                    }
+                    fileText.setText(read);
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    try {
+                        if(bufferedReader!=null)
+                            bufferedReader.close();
+                        if(bufferedWriter!=null)
+                            bufferedWriter.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+
+
             }
         });
     }
