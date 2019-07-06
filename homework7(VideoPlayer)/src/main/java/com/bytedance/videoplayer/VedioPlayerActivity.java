@@ -197,6 +197,7 @@ public class VedioPlayerActivity extends AppCompatActivity {
         int surfaceWidth = surfaceView.getWidth();
         int surfaceHeight = surfaceView.getHeight();
         Log.d(TAG, "changeVideoSize() called width="+videoWidth+ ",height="+videoHeight);
+        Log.d(TAG, "changeVideoSize() called width="+surfaceWidth+ ",height="+surfaceHeight);
 
         //根据视频尺寸去计算->视频可以在sufaceView中放大的最大倍数。
         float max;
@@ -206,6 +207,7 @@ public class VedioPlayerActivity extends AppCompatActivity {
         } else {
             //横屏模式下按视频高度计算放大倍数值
             max = Math.max(((float) videoWidth / (float) surfaceHeight), (float) videoHeight / (float) surfaceWidth);
+            //max = Math.max(max,getResources().getDisplayMetrics().heightPixels-40);
         }
 
         //视频宽高分别/最大倍数值 计算出放大后的视频尺寸
