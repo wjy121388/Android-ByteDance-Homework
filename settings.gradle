@@ -1,1 +1,2 @@
-include ':app', ':homework2', ':demo3', ':homework3', ':homework4', ':homework5', ':introducing_multithreading_and_retrofit', 'homework6', 'homework7(VideoPlayer)', ':VideoPlayerDemo'
+include ':app', ':homework2', ':demo3', ':homework3', ':homework4', ':homework5', ':introducing_multithreading_and_retrofit', 'homework6', 'homework7(VideoPlayer)', ':VideoPlayerDemo', ':homework8'
+project(':homework8').projectDir = new File('homework8(Camera)')
